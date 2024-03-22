@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Denuncie_Online:build:production"
+              "buildTarget": "Denuncie_Online:build:production"
             },
             "development": {
-              "browserTarget": "Denuncie_Online:build:development"
+              "buildTarget": "Denuncie_Online:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Denuncie_Online:build"
+            "buildTarget": "Denuncie_Online:build"
           }
         },
         "test": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9eef631e-0242-456b-aae6-744e38fbca20"
   }
 }
