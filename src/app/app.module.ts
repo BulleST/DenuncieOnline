@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './parts/header/header.component';
 import { ContentComponent } from './parts/content/content.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ContentComponent } from './parts/content/content.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
+  
 
     ToastrModule.forRoot({
       preventDuplicates: true,

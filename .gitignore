@@ -1,5 +1,6 @@
 .angular/
-.angular/cash
+.angular/cache
 .dist/
 node_modules/
 **/cache/*
+**/cache/17.3.1/**node_modules/
