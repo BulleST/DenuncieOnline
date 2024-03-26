@@ -3,25 +3,25 @@
     <ng-template ngbSlide >
         <img [src]="images[0]" alt="Random first slide" class="c-img">
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide >
         <img [src]="images[1]" alt="Random second slide" class="c-img" >
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <img [src]="images[2]" alt="Random third slide" class="c-img">
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
       <img [src]="images[3]" alt="Random third slide" class="c-img">
       <div class="carousel-caption">
-        <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+        <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
 			</div>
   </ng-template>
   </ngb-carousel>
@@ -36,7 +36,7 @@
       <div class="d-flex w-100 justify-content-center">
          <img class="rounded-circle mb-2 " width="140" height="140" src="../../../assets/icon-1.png" alt="">
       </div>
-      <h2 class="fs-4 fw-bold text-center">Preservação de Imagem</h2>
+      <h2 class="fs-4 fw-bold text-center">Preservação de Imagem <i class="fa fa-check" aria-hidden="true"></i>></h2>
       <p>Atendimento completo com assessoria altamente especializada em Compliance.</p>
     </div><!-- /.col-lg-3 -->
     <div class="col-lg-3 h-100">
@@ -63,19 +63,51 @@
  
   </div><!-- /.row -->
 
+  <hr class="featurette-divider">
+
+  <div id="fluxo-acessoria">
+    <p class="fs-2 fw-bold text-center mt-3">FLUXO<span class="text-body-secondary"> E ASSESSORIA</span>
+    <img src="../../../assets/fluxo.png" alt="fluxo">  
+  </div>
+  
 
   <!-- START THE FEATURETTES -->
+
 
   <hr class="featurette-divider">
 
   <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">Aderência Regulatória.</h2>
-      <p class="lead">A resolução do Bacen nº 4.567 de 27 de Abril de 2017 estabelece o prazo de 90 dias para implantação deste canal de comunicação.</p>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Aderência Regulatória <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">A resolução do Bacen nº 4.567 de 27 de Abril de 2017 estabelece o prazo de 90 dias para implantação deste canal de comunicação.</p>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Fortalecimento de Reputação e Imagem <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">A disponibilização de um canal de denúncias evidencia e reforça o comprometimento da empresa com princípios legais, éticos e morais.
+              Esta iniciativa cativa e consolida a credibilidade perante colaboradores, fornecedores e clientes.</p>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Redução de Custo <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">Evitando custos de contratação, treinamento e encargos trabalhistas a empresa economiza não apenas dinheiro, mas também horas de trabalho de seus gestores.
+
+              O cliente não se preocupa com quadro de colaboradores pois há substituição ágil em caso de falta por problemas de saúde, férias ou desligamento de funcionários.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-5">
+        <img src="../../../assets/Regulamento2.png" alt="" width="750" height="500">
+      </div>
     </div>
-    <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-    </div>
+  
+  
   </div>
 
   <hr class="featurette-divider">
@@ -86,54 +118,47 @@
       <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
     </div>
     <div class="col-md-5 order-md-1">
+      
       <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
     </div>
   </div>
 
   <hr class="featurette-divider">
 
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-      <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-    </div>
-    <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-    </div>
-  </div>
 
-  <hr class="featurette-divider">
+  
 
   <!-- /END THE FEATURETTES -->
 
 </div>
 
-<div class="container">
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Nome</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">E-mail</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem:</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-  </form>
+<p class="fs-4 fw-bold p-3 text-center">Faça como milhares de empresas que utilizam canal de denúncias para reduzir comportamentos inapropriados</p>
+
+<div class="container d-flex justify-content-center">
+  <div class="card w-50 d-flex">
+    <form class="p-4 w-100">
+      <div class="form-group">
+          <p class="fs-4 fw-bold mb-2">Fale Conosco</p>
+          <label for="exampleInputEmail1">Nome:</label>
+          <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+      </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Email:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+          <label for="exampleInputPassword1">Telefone:</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Telefone">
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">Sua Mensagem:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      <button type="submit" class="btn btn-dark mt-3">Enviar Mensagem</button>
+    </form>
+  </div>
+ 
 </div>
 
 <div class="container">

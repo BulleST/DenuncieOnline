@@ -8,6 +8,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './parts/header/header.component';
 import { ContentComponent } from './parts/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,6 +25,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    ToggleButtonModule,
+    FormsModule,
+   
+    
   
 
     ToastrModule.forRoot({
