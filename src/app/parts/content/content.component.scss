@@ -1,7 +1,33 @@
-    .c-img{
-        height: 600px;
-        width: 100%;
-        object-fit: cover;
-    }
+.c-img {
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
 
-    @import "primeicons/primeicons.css";
+.carousel{
+    width: 96%;
+}
+
+.gray-h:hover{
+    background: #626466;
+    color: white;
+    transition: 0.4s;
+}
+
+.c-img-fit{
+    width: fit-content;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.c-card-fit{
+    padding-right: 0;
+   
+}
+
+@import "primeicons/primeicons.css";
+

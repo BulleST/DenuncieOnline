@@ -1,42 +1,43 @@
-<div class="container mb-5">
-  <ngb-carousel *ngIf="images" class="">
+<!-- /SLIDES -->
+<div class="container mb-5 d-flex justify-content-center align-items-center">
+  <ngb-carousel *ngIf="images" class="carousel radius">
     <ng-template ngbSlide >
         <img [src]="images[0]" alt="Random first slide" class="c-img">
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#fale-conosco">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide >
         <img [src]="images[1]" alt="Random second slide" class="c-img" >
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#fale-conosco">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <img [src]="images[2]" alt="Random third slide" class="c-img">
         <div class="carousel-caption">
-          <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
+          <p><a class="btn btn-lg btn btn-secondary" href="#fale-conosco">Saiba Mais</a></p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
       <img [src]="images[3]" alt="Random third slide" class="c-img">
       <div class="carousel-caption">
-        <p><a class="btn btn-lg btn btn-secondary" href="#">Saiba Mais</a></p>
+        <p><a class="btn btn-lg btn btn-secondary" href="#fale-conosco">Saiba Mais</a></p>
 			</div>
   </ng-template>
   </ngb-carousel>
 </div>
-
-
-<div class="container marketing me-6">
-
+<!-- /CANAL DE DENÚNCIA -->
+<div id="canal-de-denuncia" class="container marketing me-6">
+  <hr class="featurette-divider">
   <!-- Three columns of text below the carousel -->
+  <p class="fs-2 fw-bold text-center mt-3 mb-3">CANAL<span class="text-body-secondary"> DE DENÚNCIA</span>
   <div class="row">
     <div class="col-lg-3 h-100">
       <div class="d-flex w-100 justify-content-center">
-         <img class="rounded-circle mb-2 " width="140" height="140" src="../../../assets/icon-1.png" alt="">
+         <img class="rounded-circle mb-3 " width="140" height="140" src="../../../assets/icon-1.png" alt="">
       </div>
-      <h2 class="fs-4 fw-bold text-center">Preservação de Imagem <i class="fa fa-check" aria-hidden="true"></i>></h2>
+      <h2 class="fs-4 fw-bold mb-2 text-center">Preservação de Imagem <i class="fa fa-check" aria-hidden="true"></i></h2>
       <p>Atendimento completo com assessoria altamente especializada em Compliance.</p>
     </div><!-- /.col-lg-3 -->
     <div class="col-lg-3 h-100">
@@ -59,122 +60,173 @@
       </div>
       <h2 class="fs-4 fw-bold mb-2 text-center">Treinamento</h2>
       <p class="fs-6">Formação com profissionais especializados para todos os níveis hierárquicos de sua companhia.</p>
-    </div><!-- /.col-lg-3 -->
- 
-  </div><!-- /.row -->
-
+    </div>
+  </div>
   <hr class="featurette-divider">
-
+  <!-- DIAGRAM -->
   <div id="fluxo-acessoria">
     <p class="fs-2 fw-bold text-center mt-3">FLUXO<span class="text-body-secondary"> E ASSESSORIA</span>
-    <img src="../../../assets/fluxo.png" alt="fluxo">  
+    <img class="justify-content-center" src="../../../assets/fluxo3.png" alt="fluxo">  
   </div>
-  
-
-  <!-- START THE FEATURETTES -->
-
-
   <hr class="featurette-divider">
-
-  <div class="row featurette">
+  <!-- VANTAGENS E BENEFÍCIOS -->
+  <p class="fs-2 fw-bold text-center mt-3 mb-3" id="vantagens">VANTAGENS<span class="text-body-secondary"> E BENEFÍCIOS</span>
+  <div class="row featurette" >
     <div class="row">
       <div class="col-sm-5">
-        <div class="card mb-2">
+        <div class="card gray-h mb-2">
           <div class="card-body">
             <h5 class="card-title">Aderência Regulatória <i class="pi pi-check-circle"></i></h5>
             <p class="card-text">A resolução do Bacen nº 4.567 de 27 de Abril de 2017 estabelece o prazo de 90 dias para implantação deste canal de comunicação.</p>
           </div>
         </div>
-        <div class="card mb-2">
+        <div class="card gray-h mb-2">
           <div class="card-body">
             <h5 class="card-title">Fortalecimento de Reputação e Imagem <i class="pi pi-check-circle"></i></h5>
             <p class="card-text">A disponibilização de um canal de denúncias evidencia e reforça o comprometimento da empresa com princípios legais, éticos e morais.
               Esta iniciativa cativa e consolida a credibilidade perante colaboradores, fornecedores e clientes.</p>
           </div>
         </div>
-        <div class="card mb-2">
+        <div class="card gray-h mb-2">
           <div class="card-body">
             <h5 class="card-title">Redução de Custo <i class="pi pi-check-circle"></i></h5>
             <p class="card-text">Evitando custos de contratação, treinamento e encargos trabalhistas a empresa economiza não apenas dinheiro, mas também horas de trabalho de seus gestores.
-
               O cliente não se preocupa com quadro de colaboradores pois há substituição ágil em caso de falta por problemas de saúde, férias ou desligamento de funcionários.</p>
           </div>
         </div>
       </div>
-      
       <div class="col-md-5">
-        <img src="../../../assets/Regulamento2.png" alt="" width="750" height="500">
+        <img class="rounded" src="../../../assets/Regulamento2.png" alt="" width="750" height="500">
       </div>
     </div>
-  
-  
   </div>
-
   <hr class="featurette-divider">
-
+  <!-- VANTAGENS E BENEFÍCIOS PARTE 2 -->
   <div class="row featurette">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-      <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+    <div class="row d-flex justify-content-between m-0">
+      <div class="col-sm-5 p-1 pe-3">
+        <img class="me-4 rounded" src="../../../assets/seguranca1.png" alt="" width="750" height="500">
+      </div>
+      <div class="col-sm-5 pl-3">
+        <div class="card gray-h mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Assessoria Especializada <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">Satisfação garantida com um serviço de excelência que só pode ser prestado por especialistas com anos de experiência nacional e internacional.</p>
+          </div>
+        </div>
+        <div class="card gray-h mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Idoneidade e Imparcialidade <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">A externalização do canal de denúncias garante que ninguém poderá ter acesso ao sistema para modificar ou excluir qualquer manifestação.
+              Esta característica garante tratamento de 100% das ocorrências com total isenção e imparcialidade.</p>
+          </div>
+        </div>
+        <div class="card gray-h mb-2">
+          <div class="card-body">
+            <h5 class="card-title">Sigilo e Confidencialidade <i class="pi pi-check-circle"></i></h5>
+            <p class="card-text">Nosso Canal de Denúncias garante total sigilo e confidencialidade, perante eliminação de qualquer necessidade de identificação do denunciante.
+              Os denunciantes sentem o conforto de não haver rastreamento de ligação, e-mail, mensagem ou reconhecimento de voz.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
   <hr class="featurette-divider">
-
-
-  
-
   <!-- /END THE FEATURETTES -->
-
 </div>
-
+<!-- /FALE CONOSCO -->
 <p class="fs-4 fw-bold p-3 text-center">Faça como milhares de empresas que utilizam canal de denúncias para reduzir comportamentos inapropriados</p>
-
 <div class="container d-flex justify-content-center">
   <div class="card w-50 d-flex">
     <form class="p-4 w-100">
-      <div class="form-group">
-          <p class="fs-4 fw-bold mb-2">Fale Conosco</p>
-          <label for="exampleInputEmail1">Nome:</label>
-          <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-      </div>
-      <div class="form-group">
-          <label for="exampleInputEmail1">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-      </div>
-      <div class="form-group">
-          <label for="exampleInputPassword1">Telefone:</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Telefone">
-      </div>
-      <div class="form-group">
-          <label for="exampleFormControlTextarea1">Sua Mensagem:</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <h5 class="card-title">Fale Conosco</h5>
+        <div class="form-floating mb-3">
+          <input 
+            [class.is-invalid]="nome.touched && nome.invalid"
+            ngModel
+            #nome="ngModel"
+            name="nome"
+            type="text" 
+            class="form-control is-invalid" 
+            id="floatingInput" 
+            placeholder="name@example.com"
+            required>
+          <label class="text-body-tertiary" 
+                  for="floatingInput">Nome*</label>
+          <div class="invalid-feedback">
+            Por favor insira seu nome.
+          </div>
+        </div>
+       
+        <div class="form-floating mb-3" >
+          <input 
+            [class.is-invalid]="email.touched && email.invalid"
+            ngModel
+            #email="ngModel"
+            type="email" 
+            name="id"
+            class="form-control is-invalid" 
+            id="floatingInput" 
+            placeholder="name@example.com"
+            required>
+          <label class="text-body-tertiary" 
+                  for="floatingInput">E-mail*</label>
+          <div class="invalid-feedback">
+            Por favor insira um e-mail válido.
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input 
+            [class.is-invalid]="telefone.touched && telefone.invalid"
+            ngModel
+            #telefone="ngModel"
+            name="telefone"
+            type="text" 
+            class="form-control" 
+            id="floatingInput" 
+            placeholder="name@example.com"
+            required>
+          <label class="text-body-tertiary" 
+                  for="floatingInput">Telefone*</label>
+          <div class="invalid-feedback">
+            Por favor insira um telefone válido.
+          </div>
+        </div>
+        <div class="form-floating">
+          <textarea 
+            [class.is-invalid]="mensagem.touched && mensagem.invalid"
+            ngModel
+            #mensagem="ngModel"
+            name="mensagem"
+            type="text" 
+            class="form-control" 
+            placeholder="Leave a comment here" 
+            id="mensagem" 
+            style="height:100px"
+            minlength="20"
+            required>
+          </textarea>
+          <label class="text-body-tertiary" 
+                  for="floatingTextarea2">Sua Mensagem</label>
+          <div class="invalid-feedback">
+            Por favor insira sua mensagem neste campo.
+          </div>
         </div>
       <button type="submit" class="btn btn-dark mt-3">Enviar Mensagem</button>
     </form>
   </div>
- 
 </div>
-
-<div class="container">
+<!-- /FOOTER -->
+<div class="container" id="fale-conosco">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-body-secondary">2024 © Denuncie OnLine. Todos os direitos reservados, Inc</p>
-
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <p class="col-md-4 mb-0 text-body-secondary">2024 © Denuncie OnLine. Todos os direitos reservados</p>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto">
+      <img src="../../../assets/icon-logo.png" width="60" height="60" alt="logo">
     </a>
-
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      <li class="nav-item"><a href="https://www.bullest.com.br/" class="nav-link px-2 text-body-secondary"> Powered by <span class="text-body-dark">Bullest</span></a></li>
+     
     </ul>
   </footer>
 </div>
