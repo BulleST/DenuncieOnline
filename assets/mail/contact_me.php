@@ -1,6 +1,6 @@
 <?php
 // Check for empty fields
-/*if(empty($_POST['name'])  		||
+if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['phone']) 		||
    empty($_POST['message'])	||
@@ -21,8 +21,8 @@ $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
 $headers .= "From: noreply@bullest.com.br\r\n"; // remetente
 $headers .= "Return-Path: noreply@bullest.com.br\r\n"; // return-path
 $envio = mail("felipebulle@gmail.com,andcastrocar1@gmail.com", "Contato Denúncia Online", "Nome: $name\n\nE-mail: $email_address\n\nTelefone: $phone\n\nMensagem:\n$message", $headers);
-return true;	*/	
-require './../PHPMailer/src/PHPMailer.php';
+return true;	
+/*require './../PHPMailer/src/PHPMailer.php';
 switch($_SERVER['REQUEST_METHOD']){
    case("OPTIONS"): //Allow preflighting to take place.
        header("Access-Control-Allow-Origin: *");
@@ -70,5 +70,5 @@ switch($_SERVER['REQUEST_METHOD']){
    default: //Reject any non POST or OPTIONS requests.
        header("Allow: POST", true, 405);
        exit;
-}
+}*/
 ?>
