@@ -10,6 +10,9 @@ import { ContentComponent } from './parts/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { FormsModule } from '@angular/forms';
+import { ConsultarDenunciaComponent } from './parts/consultar-denuncia/consultar-denuncia.component';
+import { FooterComponent } from './parts/footer/footer.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -17,7 +20,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContentComponent
+    FooterComponent,
+    ContentComponent,
+    ConsultarDenunciaComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import { FormsModule } from '@angular/forms';
       enableHtml: true
     })
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

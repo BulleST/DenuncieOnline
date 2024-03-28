@@ -1,0 +1,49 @@
+
+
+
+<div class="fill-h">
+  <div class="container d-flex justify-content-center">
+    <div class="card w-50 d-flex" *ngIf="!submitted" >
+      <form #ngForm="ngForm" (ngSubmit)="send(ngForm)" class="p-4 w-100" >
+        <h5 class="card-title">Número de Protocolo</h5>
+          <div class="form-floating mb-3">
+            <input 
+              [class.is-invalid]="Protocol.touched && Protocol.invalid"
+              [(ngModel)]="object.Protocol"
+              #Protocol="ngModel"
+              name="Protocol"
+              type="text" 
+              class="form-control is-invalid" 
+              id="Protocol" 
+              required>
+            <label class="text-body-tertiary" 
+                    for="floatingInput">Protocolo*</label>
+            <div class="invalid-feedback">
+              Por favor insira seu número de protocolo neste campo.
+            </div>
+          </div>
+        <button type="submit" class="btn btn-dark mt-3" 
+        [disabled]="ngForm.invalid || loading">Enviar</button>
+      </form>
+
+    </div>
+    <div class="w-50" *ngIf="submitted">
+      <div class="card mask-custom w-100" *ngFor="let mensagem of list">
+        <div class="card-header d-flex justify-content-between p-3" style="border-bottom: 1px solid rgba(255,255,255,.3);">
+          <p class="fw-bold text-secondary mb-0"></p>
+          <p class="text-secondary small mb-0"><i class="far fa-clock"></i> {{formatDateTime(mensagem.DataHora)}}</p>
+        </div>
+        <div class="card-body">
+          <p class="mb-0 text-secondary">
+           {{mensagem.Descricao}}
+          </p>
+        </div>
+      </div>
+      <button class=" btn btn-dark mt-3" (click)="back()">Voltar</button>
+    </div>
+    </div>
+  </div>
+
+
+
+  <router-outlet></router-outlet>

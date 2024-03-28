@@ -138,17 +138,17 @@
 <p class="fs-4 fw-bold p-3 text-center">Faça como milhares de empresas que utilizam canal de denúncias para reduzir comportamentos inapropriados</p>
 <div class="container d-flex justify-content-center">
   <div class="card w-50 d-flex">
-    <form class="p-4 w-100">
+    <form #ngForm="ngForm" (ngSubmit)="send(ngForm)" class="p-4 w-100">
       <h5 class="card-title">Fale Conosco</h5>
         <div class="form-floating mb-3">
           <input 
-            [class.is-invalid]="nome.touched && nome.invalid"
-            ngModel
-            #nome="ngModel"
-            name="nome"
+            [class.is-invalid]="name.touched && name.invalid"
+            [(ngModel)]="object.name"
+            #name="ngModel"
+            name="name"
             type="text" 
             class="form-control is-invalid" 
-            id="floatingInput" 
+            id="name" 
             placeholder="name@example.com"
             required>
           <label class="text-body-tertiary" 
@@ -161,12 +161,12 @@
         <div class="form-floating mb-3" >
           <input 
             [class.is-invalid]="email.touched && email.invalid"
-            ngModel
+            [(ngModel)]="object.email"
             #email="ngModel"
             type="email" 
-            name="id"
+            name="email"
             class="form-control is-invalid" 
-            id="floatingInput" 
+            id="email" 
             placeholder="name@example.com"
             required>
           <label class="text-body-tertiary" 
@@ -177,13 +177,13 @@
         </div>
         <div class="form-floating mb-3">
           <input 
-            [class.is-invalid]="telefone.touched && telefone.invalid"
-            ngModel
-            #telefone="ngModel"
-            name="telefone"
+            [class.is-invalid]="phone.touched && phone.invalid"
+            [(ngModel)]="object.phone"
+            #phone="ngModel"
+            name="phone"
             type="text" 
             class="form-control" 
-            id="floatingInput" 
+            id="phone" 
             placeholder="name@example.com"
             required>
           <label class="text-body-tertiary" 
@@ -194,14 +194,14 @@
         </div>
         <div class="form-floating">
           <textarea 
-            [class.is-invalid]="mensagem.touched && mensagem.invalid"
-            ngModel
-            #mensagem="ngModel"
-            name="mensagem"
+            [class.is-invalid]="message.touched && message.invalid"
+            [(ngModel)]="object.message"
+            #message="ngModel"
+            name="message"
             type="text" 
             class="form-control" 
             placeholder="Leave a comment here" 
-            id="mensagem" 
+            id="message" 
             style="height:100px"
             minlength="20"
             required>
@@ -212,22 +212,11 @@
             Por favor insira sua mensagem neste campo.
           </div>
         </div>
-      <button type="submit" class="btn btn-dark mt-3">Enviar Mensagem</button>
+      <button type="submit" class="btn btn-dark mt-3" 
+      [disabled]="ngForm.invalid || loading">Enviar Mensagem</button>
     </form>
   </div>
 </div>
-<!-- /FOOTER -->
-<div class="container" id="fale-conosco">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-body-secondary">2024 © Denuncie OnLine. Todos os direitos reservados</p>
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto">
-      <img src="../../../assets/icon-logo.png" width="60" height="60" alt="logo">
-    </a>
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="https://www.bullest.com.br/" class="nav-link px-2 text-body-secondary"> Powered by <span class="text-body-dark">Bullest</span></a></li>
-     
-    </ul>
-  </footer>
-</div>
+
+<router-outlet></router-outlet>
  
