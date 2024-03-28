@@ -22,7 +22,7 @@ $headers .= "From: noreply@bullest.com.br\r\n"; // remetente
 $headers .= "Return-Path: noreply@bullest.com.br\r\n"; // return-path
 $envio = mail("felipebulle@gmail.com,andcastrocar1@gmail.com", "Contato Denúncia Online", "Nome: $name\n\nE-mail: $email_address\n\nTelefone: $phone\n\nMensagem:\n$message", $headers);
 return true;	*/	
-/*switch($_SERVER['REQUEST_METHOD']){
+switch($_SERVER['REQUEST_METHOD']){
    case("OPTIONS"): //Allow preflighting to take place.
        header("Access-Control-Allow-Origin: *");
        header("Access-Control-Allow-Methods: POST");
@@ -70,4 +70,4 @@ return true;	*/
        header("Allow: POST", true, 405);
        exit;
 }
-?>*/
+?>
