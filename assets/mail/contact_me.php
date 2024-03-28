@@ -22,6 +22,7 @@ $headers .= "From: noreply@bullest.com.br\r\n"; // remetente
 $headers .= "Return-Path: noreply@bullest.com.br\r\n"; // return-path
 $envio = mail("felipebulle@gmail.com,andcastrocar1@gmail.com", "Contato Denúncia Online", "Nome: $name\n\nE-mail: $email_address\n\nTelefone: $phone\n\nMensagem:\n$message", $headers);
 return true;	*/	
+require './../PHPMailer/src/PHPMailer.php';
 switch($_SERVER['REQUEST_METHOD']){
    case("OPTIONS"): //Allow preflighting to take place.
        header("Access-Control-Allow-Origin: *");
