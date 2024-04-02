@@ -1,3 +1,30 @@
+@import "primeicons/primeicons.css";
+@import "../../../assets/css/button.css";
+
 .fill-h{
     min-height: calc(100vh - 310px);
+}
+
+.card-denunciante{
+    float: right;
+    width: 60%;
+}
+
+.card-nao-denunciante{
+    float: left;
+    width: 60%;
+}
+
+:host ::ng-deep .btn-back{
+    justify-content: right;
+}
+
+.time-left{
+    bottom: -25px;
+    left: 5px;
+}
+
+.time-right{
+    bottom: -25px;
+    right: 5px; 
 }

@@ -6,6 +6,7 @@ import { lastValueFrom } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { ProtocoloMensagem } from 'src/app/model/protocol.model';
 
 @Component({
   selector: 'app-consultar-denuncia',
@@ -17,6 +18,8 @@ export class ConsultarDenunciaComponent {
   list: Mensagem[] = [];
   object: Protocolo = new Protocolo;
   submitted: boolean = false;
+  message: ProtocoloMensagem = new ProtocoloMensagem;
+
   
 
   constructor(
@@ -31,7 +34,23 @@ export class ConsultarDenunciaComponent {
     if(ngForm.invalid){
       return
     }
-    lastValueFrom(this.protocoloService.post(this.object))
+   this.loadList(this.object)
+
+  }
+
+  sendMessage(form: NgForm){
+    if(form.invalid){
+      return
+    }
+    this.message.Protocol = this.object.Protocol;
+    lastValueFrom(this.protocoloService.post(this.message))
+    .then(res =>{
+     this.loadList(this.object)
+    })
+  }
+
+  loadList(protocol: Protocolo){
+    lastValueFrom(this.protocoloService.getMessages(protocol))
     .then(res => {
       if(res){
         this.loading = false;
@@ -44,7 +63,6 @@ export class ConsultarDenunciaComponent {
     .catch(res => {
       console.log('erro', res)
     })
-
   }
 
   back(){
@@ -53,6 +71,6 @@ export class ConsultarDenunciaComponent {
   }
 
   formatDateTime(date: Date){
-     return this.datePipe.transform( date, 'HH:mm:ss dd/MM/yyyy') as string;
+     return this.datePipe.transform( date, 'dd/MM/yyyy HH:mm:ss') as string;
   }
 }

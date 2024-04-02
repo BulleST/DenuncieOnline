@@ -1,7 +1,7 @@
 
 
 
-<div class="fill-h">
+<div class="fill-h w-100">
   <div class="container d-flex justify-content-center">
     <div class="card w-50 d-flex" *ngIf="!submitted" >
       <form #ngForm="ngForm" (ngSubmit)="send(ngForm)" class="p-4 w-100" >
@@ -28,18 +28,68 @@
 
     </div>
     <div class="w-50" *ngIf="submitted">
-      <div class="card mask-custom w-100" *ngFor="let mensagem of list">
-        <div class="card-header d-flex justify-content-between p-3" style="border-bottom: 1px solid rgba(255,255,255,.3);">
-          <p class="fw-bold text-secondary mb-0"></p>
-          <p class="text-secondary small mb-0"><i class="far fa-clock"></i> {{formatDateTime(mensagem.DataHora)}}</p>
+      <div class="container-card">
+        <div class="card mask-custom mt-3 mb-3"
+        [class.card-denunciante]="mensagem.MensagemDenunciante"
+        [class.card-nao-denunciante]="!mensagem.MensagemDenunciante"
+         *ngFor="let mensagem of list">
+        <div *ngIf="mensagem.MensagemDenunciante"
+           class="card-header d-flex justify-content-start p-3 bg-dark text-white" 
+           style="border-bottom: 1px solid rgba(255,255,255,.3);">
+          <p class="fw-bold text-white mb-0">Denunciante</p>
         </div>
-        <div class="card-body">
-          <p class="mb-0 text-secondary">
-           {{mensagem.Descricao}}
-          </p>
+      
+        <div *ngIf="!mensagem.MensagemDenunciante" 
+          class="card-header d-flex justify-content-start p-3 bg-secondary text-white" 
+          style="border-bottom: 1px solid rgba(255,255,255,.3);">
+          <div>
+            <p class="fw-bold text-white mb-0 me-5">Denuncie OnLine</p>
+          </div>
+    
+          
         </div>
+        
+          <div class="card-body">
+            <p class="mb-0 text-secondary">
+              {{mensagem.Descricao}}
+            </p>
+          </div>
+          <p [class.time-right]="mensagem.MensagemDenunciante"
+          [class.time-left]="!mensagem.MensagemDenunciante" class="text-secondary small mb-0 position-absolute"> {{formatDateTime(mensagem.DataHora)}}</p>
+        </div>
+       
       </div>
-      <button class=" btn btn-dark mt-3" (click)="back()">Voltar</button>
+      
+      
+       
+     
+      <form #form="ngForm" class="mt-5" (ngSubmit)="sendMessage(form)">
+        <div class="form-floating w-100 d-flex row justify-content-center ms-0">
+          <textarea 
+            [class.is-invalid]="textarea.touched && textarea.invalid"
+            [(ngModel)]="message.Description"
+            #textarea="ngModel"
+            name="textarea"
+            type="text" 
+            class="form-control mt-5" 
+            placeholder="" 
+            id="textarea" 
+            style="height:100px"
+            required>
+          </textarea>
+          <label class="text-body-tertiary mt-5" 
+                  for="textarea">Sua Mensagem</label>
+         <div class="invalid-feedback ">
+          Por favor insira sua mensagem neste campo.
+        </div>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+          <button pRipple icon="pi pi-angle-left fs-5 " pButton class="p-element btn-back shadow-2 p-ripple mt-3" (click)="back()"></button>
+          <button type="submit" class="btn btn-dark mt-3" [disabled]="form.invalid || loading">Enviar</button>
+        </div>
+      </form>
+      
     </div>
     </div>
   </div>

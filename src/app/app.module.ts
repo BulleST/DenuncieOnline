@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ConsultarDenunciaComponent } from './parts/consultar-denuncia/consultar-denuncia.component';
 import { FooterComponent } from './parts/footer/footer.component';
 import { DatePipe } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -32,6 +33,7 @@ import { DatePipe } from '@angular/common';
     NgbModule,
     ToggleButtonModule,
     FormsModule,
+    ButtonModule,
    
     
   
