@@ -11,7 +11,12 @@ import { lastValueFrom } from 'rxjs';
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-    object: FormContato = new FormContato;
+    object: FormContato = {
+      "name": "Beatriz Laís Pedrão Moreno",
+      "email": "beatrizlaispe@gmail.com",
+      "phone": "11933377700",
+      "message": "teste"
+  }
     loading = false;
     images: string[] = [
       '../../../assets/1.png',
