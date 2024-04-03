@@ -4,6 +4,7 @@ import * as bootstrap from 'bootstrap';
 import { FormContato } from 'src/app/model/form.model';
 import { FormService } from 'src/app/services/form.service';
 import { lastValueFrom } from 'rxjs';
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: 'main',
@@ -26,6 +27,7 @@ export class ContentComponent {
     ]
   constructor(
     private formService: FormService,
+    private toastr: ToastrService,
   ){
    
   }
@@ -48,9 +50,12 @@ export class ContentComponent {
     lastValueFrom(this.formService.post(this.object))
     .then(res => {
       console.log(res)
+      this.toastr.success('Mensagem enviada com sucesso!')
+      
     })
     .catch(res => {
       console.log(res)
+      this.toastr.error('Operação inválida!');
     })
 
   }
