@@ -16,12 +16,12 @@ import { Mensagem } from "./../model/protocol.model";
       ) { }
       
     getMessages(model: Protocolo){
-        return this.httpClient.post<Mensagem[]>('http://denuncieonline.azurewebsites.net/GetMessages', model)
+        return this.httpClient.post<Mensagem[]>('https://denuncieonline.azurewebsites.net/GetMessages', model)
     }
 
     post(model: Protocolo){
       console.log(model)
-      return this.httpClient.post<RetornoProtocolo>('http://denuncieonline.azurewebsites.net/AddMessage', model)
+      return this.httpClient.post<RetornoProtocolo>('https://denuncieonline.azurewebsites.net/AddMessage', model)
 
   }
   } 

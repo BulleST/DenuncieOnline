@@ -39,12 +39,13 @@ export class ContentComponent {
     if(ngForm.invalid){
       return
     }
+    
     lastValueFrom(this.formService.post(this.object))
     .then(res => {
-      console.log('sucesso', res)
+      console.log(res)
     })
     .catch(res => {
-      console.log('erro', res)
+      console.log(res)
     })
 
   }

@@ -6,7 +6,8 @@ if(empty($_POST['name'])  		||
    empty($_POST['message'])	||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
-	echo "No arguments Provided!";
+	//echo "No arguments Provided!";
+   echo var_dump($_POST);
 	return false;
    }
 	
@@ -14,6 +15,7 @@ $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+
 
 // Create the email and send the message
 $headers = "MIME-Version: 1.1\r\n";

@@ -13,6 +13,6 @@ import { FormContato } from "../model/form.model";
       ) { }
       
     post(model: FormContato){
-        return this.httpClient.post<boolean>('./assets/mail/contact_me.php', model)
+        return this.httpClient.post('./assets/mail/contact_me.php', model, {responseType: 'text'})
     }
   }

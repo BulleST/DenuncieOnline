@@ -46,6 +46,8 @@ export class ConsultarDenunciaComponent {
     lastValueFrom(this.protocoloService.post(this.message))
     .then(res =>{
      this.loadList(this.object)
+     this.message.Description = '';
+     form.reset();
     })
   }
 
