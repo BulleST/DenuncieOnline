@@ -1,0 +1,9 @@
+.btn-back{
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    background-color:  #212529;
+    border: none;
+}
