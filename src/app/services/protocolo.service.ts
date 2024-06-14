@@ -16,12 +16,12 @@ import { Mensagem } from "./../model/protocol.model";
       ) { }
       
     getMessages(model: Protocolo){
-        return this.httpClient.post<ProtocoloResponse>('http://localhost:15820/api/denuncia-mensagem/GetMessages', model)
+        return this.httpClient.post<ProtocoloResponse>('https://denuncieonline.azurewebsites.net/api/denuncia-mensagem/GetMessages', model)
     }
 
     post(model: ProtocoloMensagem){
       console.log(model)
-      return this.httpClient.post<RetornoProtocolo>('http://localhost:15820/api/denuncia-mensagem/AddMessage', model)
+      return this.httpClient.post<RetornoProtocolo>('https://denuncieonline.azurewebsites.net/api/denuncia-mensagem/AddMessage', model)
 
   }
   } 
