@@ -1,7 +1,7 @@
 
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Protocolo, RetornoProtocolo } from './../model/protocol.model';
+import { Protocolo, ProtocoloMensagem, ProtocoloResponse, RetornoProtocolo } from './../model/protocol.model';
 import { Mensagem } from "./../model/protocol.model";
 
 
@@ -16,12 +16,12 @@ import { Mensagem } from "./../model/protocol.model";
       ) { }
       
     getMessages(model: Protocolo){
-        return this.httpClient.post<Mensagem[]>('https://denuncieonline.azurewebsites.net/GetMessages', model)
+        return this.httpClient.post<ProtocoloResponse>('http://localhost:15820/api/denuncia-mensagem/GetMessages', model)
     }
 
-    post(model: Protocolo){
+    post(model: ProtocoloMensagem){
       console.log(model)
-      return this.httpClient.post<RetornoProtocolo>('https://denuncieonline.azurewebsites.net/AddMessage', model)
+      return this.httpClient.post<RetornoProtocolo>('http://localhost:15820/api/denuncia-mensagem/AddMessage', model)
 
   }
   } 

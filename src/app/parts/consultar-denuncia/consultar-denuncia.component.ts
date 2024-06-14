@@ -43,6 +43,7 @@ export class ConsultarDenunciaComponent {
       return
     }
     this.message.Protocol = this.object.Protocol;
+    this.message.MensagemDenunciante = true;
     lastValueFrom(this.protocoloService.post(this.message))
     .then(res =>{
      this.loadList(this.object)
@@ -56,7 +57,7 @@ export class ConsultarDenunciaComponent {
     .then(res => {
       if(res){
         this.loading = false;
-        this.list = res;
+        this.list = res.List;
         this.submitted = true;
         console.log(this.list)
       }
