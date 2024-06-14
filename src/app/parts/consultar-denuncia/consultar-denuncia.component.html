@@ -28,7 +28,14 @@
 
     </div>
     <div class="w-50" *ngIf="submitted">
-      <div class="container-card">
+      <div class="w-100">
+        <div class="card w-100 p-4 px-0 d-flex justify-content-center m-0" *ngIf="list.length == 0">
+       
+            <p class="fs-6 text-dark d-flex justify-content-center m-0">Por favor, aguarde. Sua denúncia está em análise!</p>
+       
+       </div>
+      </div>
+      <div class="container-card" *ngIf="list.length != 0">
         <div class="card mask-custom mt-3 mb-3"
         [class.card-denunciante]="mensagem.MensagemDenunciante"
         [class.card-nao-denunciante]="!mensagem.MensagemDenunciante"
@@ -59,17 +66,15 @@
         </div>
        
       </div>
-      
-      
-       
-     
+    
+    
       <form #form="ngForm" class="mt-5" (ngSubmit)="sendMessage(form)">
         <div class="form-floating w-100 d-flex row justify-content-center ms-0">
           <textarea 
             [class.is-invalid]="textarea.touched && textarea.invalid"
             [(ngModel)]="message.Description"
             #textarea="ngModel"
-            name="textarea"
+            name="Description"
             type="text" 
             class="form-control mt-5" 
             placeholder="" 
@@ -85,7 +90,7 @@
         </div>
         
         <div class="d-flex justify-content-between">
-          <button pRipple icon="pi pi-angle-left fs-5 " pButton class="p-element btn-back shadow-2 p-ripple mt-3" (click)="back()"></button>
+          <button type="button" pRipple icon="pi pi-angle-left fs-5"  pButton class="p-element btn-back shadow-2 p-ripple mt-3 px-3" (click)="back()">Voltar</button>
           <button type="submit" class="btn btn-dark mt-3" [disabled]="form.invalid || loading">Enviar</button>
         </div>
       </form>
