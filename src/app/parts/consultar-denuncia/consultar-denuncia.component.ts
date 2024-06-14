@@ -19,6 +19,7 @@ export class ConsultarDenunciaComponent {
   object: Protocolo = new Protocolo;
   submitted: boolean = false;
   message: ProtocoloMensagem = new ProtocoloMensagem;
+  error: string = "";
 
   
 
@@ -32,6 +33,7 @@ export class ConsultarDenunciaComponent {
 
   send(ngForm: NgForm){
     if(ngForm.invalid){
+      this.error = "";
       return
     }
    this.loadList(this.object)
@@ -40,6 +42,7 @@ export class ConsultarDenunciaComponent {
 
   sendMessage(form: NgForm){
     if(form.invalid){
+      this.error = "";
       return
     }
     this.message.Protocol = this.object.Protocol;
@@ -57,9 +60,16 @@ export class ConsultarDenunciaComponent {
     .then(res => {
       if(res){
         this.loading = false;
-        this.list = res.List;
-        this.submitted = true;
-        console.log(this.list)
+        if(res.Success) {
+          this.error = "";
+          this.list = res.List;
+          this.submitted = true;
+        }
+        else{
+          this.submitted = false;
+          this.error = res.Message;
+        }
+        
       }
       
     })

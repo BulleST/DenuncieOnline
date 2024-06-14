@@ -8,7 +8,7 @@
         <h5 class="card-title">Número de Protocolo</h5>
           <div class="form-floating mb-3">
             <input 
-              [class.is-invalid]="Protocol.touched && Protocol.invalid"
+              [class.is-invalid]="(Protocol.touched && Protocol.invalid) || error"
               [(ngModel)]="object.Protocol"
               #Protocol="ngModel"
               name="Protocol"
@@ -18,8 +18,11 @@
               required>
             <label class="text-body-tertiary" 
                     for="floatingInput">Protocolo*</label>
-            <div class="invalid-feedback">
+            <div *ngIf="!error" class="invalid-feedback">
               Por favor insira seu número de protocolo neste campo.
+            </div>
+            <div *ngIf="error" class="invalid-feedback">
+              {{error}}
             </div>
           </div>
         <button type="submit" class="btn btn-dark mt-3" 
