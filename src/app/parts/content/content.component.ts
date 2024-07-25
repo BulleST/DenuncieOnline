@@ -12,12 +12,7 @@ import { ToastrService } from "ngx-toastr";
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-    object: FormContato = {
-      "name": "Beatriz Laís Pedrão Moreno",
-      "email": "beatrizlaispe@gmail.com",
-      "phone": "11933377700",
-      "message": "teste"
-  }
+    object: FormContato = new FormContato;
     loading = false;
     images: string[] = [
       '../../../assets/1.png',
@@ -51,6 +46,8 @@ export class ContentComponent {
     .then(res => {
       console.log(res)
       this.toastr.success('Mensagem enviada com sucesso!')
+      this.object = new FormContato;
+      ngForm.reset();
       
     })
     .catch(res => {
